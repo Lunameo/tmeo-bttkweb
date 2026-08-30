@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng ký Hội viên sớm - Prima Bay Hạ Long</title>
+<style>
+  :root {
+    --bg-page: #f5f1ea;
+    --bg-panel: #ffffff;
+    --bg-accent: #f3d9b1;  
+    --border-accent: #e0855a;
+    --text-brand: #7a3b1e; 
+    --border-normal: #bbb;
+    --border-input: #999;
+    --gold: #b8860b;       
+    --gold-bg: #fdf3df;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    font-family:'Times New Roman', Times, serif;
+    background: var(--bg-page);
+    margin: 0;
+    padding: 30px 15px;
+    color: #333;
+  }
+  .form-wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+    background: var(--bg-panel);
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .form-header {
+    background: var(--bg-accent);
+    text-align: center;
+    padding: 16px 10px 12px;
+    border-bottom: 3px solid var(--border-accent);
+  }
+  .form-header h1 {
+    margin: 0 0 6px;
+    font-size: 19px;
+    letter-spacing: 0.5px;
+    color: var(--text-brand);
+  }
+  .vip-banner {
+    background: var(--gold-bg);
+    border: 1px dashed var(--gold);
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 12px;
+    margin: 6px auto 0;
+    max-width: 480px;
+    border-radius: 4px;
+  }
+  .form-body {
+    padding: 20px 25px;
+  }
+  fieldset {
+    border: 1px solid var(--border-normal);
+    margin-bottom: 20px;
+    padding: 15px 18px 20px;
+  }
+  legend {
+    font-weight: bold;
+    padding: 0 8px;
+    color: var(--text-brand);
+    font-size: 15px;
+  }
+  .field {
+    margin-bottom: 14px;
+  }
+  .field label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+  .field input[type="text"],
+  .field input[type="email"],
+  .field input[type="tel"],
+  .field input[type="date"],
+  .field input[type="number"],
+  .field select,
+  .field textarea {
+    width: 100%;
+    padding: 7px 8px;
+    border: 1px solid var(--border-input);
+    font-family: inherit;
+    font-size: 14px;
+  }
+  .field textarea {
+    resize: vertical;
+    min-height: 70px;
+  }
+  .radio-group label,
+  .checkbox-group label {
+    display: inline-block;
+    margin-right: 18px;
+    font-weight: normal;
+    font-size: 14px;
+  }
+  .radio-group input,
+  .checkbox-group input {
+    margin-right: 5px;
+  }
+  .group-title {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  
+  .preview-box {
+    margin-top: 10px;
+    display: none;
+    border: 1px solid var(--border-normal);
+    padding: 8px;
+    background: #faf8f4;
+  }
+  .preview-box.active { display: flex; gap: 10px; align-items: center; }
+  .preview-box img {
+    width: 90px;
+    height: 68px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+  }
+  .preview-box .preview-text {
+    font-size: 12.5px;
+    color: #666;
+  }
+  .preview-box .preview-text b {
+    color: var(--text-brand);
+    display: block;
+    font-size: 13.5px;
+    margin-bottom: 2px;
+  }
+
+  .form-footer {
+    background: var(--bg-accent);
+    text-align: center;
+    padding: 15px;
+    border-top: 3px solid var(--border-accent);
+  }
+  .form-footer button {
+    font-family: inherit;
+    font-size: 14px;
+    padding: 9px 24px;
+    margin: 0 6px;
+    border: 1px solid #a9611f;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  .form-footer button.primary {
+    background: var(--border-accent);
+    color: #fff;
+    border-color: #c25f34;
+    font-weight: bold;
+  }
+  .form-footer button:hover { opacity: 0.85; }
+  .privacy-note {
+    font-size: 11.5px;
+    color: #8a6a4d;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="form-wrapper">
+  <div class="form-header">
+    <h1>ĐĂNG KÝ HỘI VIÊN SỚM &nbsp;–&nbsp; PRIMA BAY HẠ LONG</h1>
+    <div class="vip-banner">
+      ★ Chỉ 300 suất đầu tiên &nbsp;|&nbsp; Chiết khấu Early Bird 1% &nbsp;|&nbsp; Ưu tiên chọn căn đẹp nhất
+    </div>
+  </div>
+
+  <div class="form-body">
+    <form id="primaBayForm" onsubmit="return handleSubmit(event)">
+
+      <fieldset>
+        <legend>Thông tin khách hàng</legend>
+
+        <div class="field">
+          <label for="hoTen">Họ tên: <span style="color:#c0392b">*</span></label>
+          <input type="text" id="hoTen" name="hoTen" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="ten@vidu.com">
+        </div>
+
+        <div class="field">
+          <label for="soDienThoai">Số điện thoại: <span style="color:#c0392b">*</span></label>
+          <input type="tel" id="soDienThoai" name="soDienThoai" pattern="[0-9]{9,11}" placeholder="09xxxxxxxx" required>
+        </div>
+
+        <div class="field">
+          <label for="ngaySinh">Ngày sinh:</label>
+          <input type="date" id="ngaySinh" name="ngaySinh">
+        </div>
+
+        <div class="field">
+          <label for="diaChi">Địa chỉ:</label>
+          <input type="text" id="diaChi" name="diaChi">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Nhu cầu tư vấn</legend>
+
+        <div class="field">
+          <label for="loaiHinh">Loại hình sản phẩm quan tâm:</label>
+          <select id="loaiHinh" name="loaiHinh" onchange="updatePreview(this.value)">
+            <option value="">-- Chọn loại hình --</option>
+            <option value="studio">Căn hộ Studio</option>
+            <option value="1pn">Căn hộ 1 phòng ngủ</option>
+            <option value="2pn">Căn hộ 2 phòng ngủ</option>
+            <option value="3pn">Căn hộ 3 phòng ngủ</option>
+            <option value="skyvilla">Sky Villas</option>
+            <option value="shophouse">Shophouse khối đế</option>
+            <option value="boutique">Boutique Hotel</option>
+          </select>
+
+          
+          <div id="previewBox" class="preview-box">
+            <img id="previewImg" src="" alt="Ảnh minh họa loại căn hộ">
+            <div class="preview-text">
+              <b id="previewTitle"></b>
+              <span id="previewDesc"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="group-title">Mức ngân sách dự kiến:</div>
+          <div class="radio-group">
+            <label><input type="radio" name="nganSach" value="duoi2ty"> Dưới 2 tỷ</label>
+            <label><input type="radio" name="nganSach" value="2-5ty"> 2 - 5 tỷ</label>
+            <label><input type="radio" name="nganSach" value="5-10ty"> 5 - 10 tỷ</label>
+            <label><input type="radio" name="nganSach" value="tren10ty"> Trên 10 tỷ</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="group-title">Mục đích quan tâm:</div>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="mucDich" value="oLauDai"> Ở lâu dài</label>
+            <label><input type="checkbox" name="mucDich" value="nghiDuong"> Nghỉ dưỡng</label>
+            <label><input type="checkbox" name="mucDich" value="dauTu"> Đầu tư sinh lời</label>
+            <label><input type="checkbox" name="mucDich" value="choThue"> Cho thuê</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="dienTich">Diện tích quan tâm (m²):</label>
+          <input type="number" id="dienTich" name="dienTich" min="0" placeholder="Ví dụ: 60">
+        </div>
+
+        <div class="field">
+          <div class="group-title">Thời điểm dự kiến giao dịch:</div>
+          <div class="radio-group">
+            <label><input type="radio" name="thoiDiem" value="thangNay"> Trong tháng này</label>
+            <label><input type="radio" name="thoiDiem" value="1-3thang"> 1 - 3 tháng tới</label>
+            <label><input type="radio" name="thoiDiem" value="timHieu"> Chỉ tìm hiểu thêm</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="ghiChu">Câu hỏi / yêu cầu tư vấn thêm:</label>
+          <textarea id="ghiChu" name="ghiChu" placeholder="Yêu cầu thêm của bạn..."></textarea>
+        </div>
+      </fieldset>
+
+    </form>
+  </div>
+
+  <div class="form-footer">
+    <button type="submit" class="primary" form="primaBayForm">Đăng ký hội viên ngay</button>
+    <button type="reset" form="primaBayForm">Nhập lại</button>
+    <div class="privacy-note">🔒 Thông tin của bạn được bảo mật, chỉ dùng để tư vấn và không chia sẻ cho bên thứ ba.</div>
+  </div>
+</div>
+
+<script>
+  
+  const previewData = {
+    studio:    { img: "https://primabay-halong.com.vn/wp-content/uploads/2026/06/noi-that-can-ho-prima-bay-ha-long-1.jpg", title: "Căn hộ Studio", desc: "29.2 – 35.5 m² · không gian mở, phù hợp đầu tư cho thuê" },
+    "1pn":     { img: "https://primabay-halong.com.vn/wp-content/uploads/2026/06/noi-that-can-ho-prima-bay-ha-long-2.jpg", title: "Căn hộ 1 phòng ngủ", desc: "47.3 – 72.1 m² · phối màu trung tính, cửa sổ lớn" },
+    "2pn":     { img: "https://primabay-halong.com.vn/wp-content/uploads/2026/06/noi-that-can-ho-prima-bay-ha-long-3.jpg", title: "Căn hộ 2 phòng ngủ", desc: "70.6 – 89 m² · phù hợp gia đình nhỏ" },
+    "3pn":     { img: "https://primabay-halong.com.vn/wp-content/uploads/2026/06/noi-that-can-ho-prima-bay-ha-long-4.jpg", title: "Căn hộ 3 phòng ngủ", desc: "92.6 – 113.1 m² · cho gia đình đa thế hệ" },
+    skyvilla:  { img: "https://primabay-halong.com.vn/wp-content/uploads/2026/06/noi-that-can-ho-prima-bay-ha-long-5.jpg", title: "Sky Villas", desc: "305.8 – 325.4 m² · giới hạn 44 căn, bể bơi riêng" },
+    shophouse: { img: "https://primabay-halong.com.vn/wp-content/uploads/2026/06/shophouse-khoi-de-prima-bay-ha-long.jpg", title: "Shophouse khối đế", desc: "31.97 – 122.16 m² · mặt kính lớn, phù hợp kinh doanh" },
+    boutique:  { img: "https://primabay-halong.com.vn/wp-content/uploads/2026/06/noi-that-can-ho-prima-bay-ha-long-6.jpg", title: "Boutique Hotel", desc: "282 – 786 m² · 11 căn, mô hình lưu trú cao cấp" }
+  };
+
+  function updatePreview(value) {
+    const box = document.getElementById("previewBox");
+    if (!value || !previewData[value]) {
+      box.classList.remove("active");
+      return;
+    }
+    const d = previewData[value];
+    document.getElementById("previewImg").src = d.img;
+    document.getElementById("previewTitle").textContent = d.title;
+    document.getElementById("previewDesc").textContent = d.desc;
+    box.classList.add("active");
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    
+    const data = new FormData(e.target);
+    const obj = {};
+    for (const [key, value] of data.entries()) {
+      obj[key] = obj[key] ? obj[key] + ", " + value : value;
+    }
+    console.log("Dữ liệu form:", obj);
+    alert("Cảm ơn bạn đã đăng ký hội viên! Đội ngũ tư vấn sẽ liên hệ trong thời gian sớm nhất.");
+    e.target.reset();
+    document.getElementById("previewBox").classList.remove("active");
+    return false;
+  }
+</script>
+
+</body>
+</html>
