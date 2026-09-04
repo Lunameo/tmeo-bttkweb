@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table{
+            border-collapse:collapse; background-color:rgb(188, 222, 244)
+        }
+        h2{
+            color:blue;
+            font-family:'Times New Roman', Times, serif;
+        }
+        td{
+            font-weight: bold;color :blue;
+        }
+
+    </style>
+    <form>
+    <table border="2" style="width: 100%; text-align: left;">
+        <tr>
+            <td colspan="2" style="text-align: center;"><h2>Đặt vé máy bay</h2></td>
+        </tr>
+        <tr>
+            <td>Họ và tên</td>
+            <td><input type="text" placeholder="Nhập họ và tên"></td>
+            
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td>
+                <input type="radio" name="gt" value="Nam"> Nam
+                <input type="radio" name="gt" value="Nữ"> Nữ
+                <input type="radio" name="gt" value="Khác"> Khác
+            </td>
+        </tr>
+        <tr>
+            <td>Điểm khởi hành</td>
+            <td>
+                <select >
+                    <option>Hà Nội(HAN)</option>
+                    <option>TP. Hồ Chí Minh(SGN)</option>
+                    <option>Đà Nẵng(DAD)</option>
+                    <option>Quảng Ninh(VDO)</option>
+                    <option>Cần Thơ(VCA)</option>
+                </select>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>Điểm đến</td>
+            <td>
+                <select >
+                    <option>Hà Nội(HAN)</option>
+                    <option>TP. Hồ Chí Minh(SGN)</option>
+                    <option>Đà Nẵng(DAD)</option>
+                    <option>Quảng Ninh(VDO)</option>
+                    <option>Cần Thơ(VCA)</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Ngày đi</td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td>Ngày về</td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td>Hạng vé</td>
+            <td>
+            <input type="radio" name="ghe" >Phổ thông
+            <input type="radio" name ="ghe">Thương gia
+            <input type="radio" name="ghe" >Hạng nhất
+            </td>
+        </tr>
+        <tr>
+            <td>Số hành khách</td>
+            <td>
+                <select>
+                    <option>1 người lớn </option>
+                    <option>2 người lớn</option>
+                    <option>1 trẻ em</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Số điện thoại</td>
+            <td><input type="tel" placeholder="Nhập số điện thoại"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email"placeholder="Nhập email"></td>
+        </tr>
+        <tr>
+            <td>Ghi chú</td>
+            <td><textarea rows="4"cols="50">Ưu tiên chuyến bay sáng</textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <input type="submit" value="Tìm chuyến bay">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center; color:red">Tìm chuyến bay thành công</td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+

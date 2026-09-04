@@ -1,0 +1,28 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #AFEEEE;
+}
+.title{
+    color: beige;
+}
+table{
+    border-collapse: collapse;
+    width: 600px;
+    background: black;
+}
+td{
+    color: #000;
+}
+.pass{
+    background-color: #d9f0c0;
+    font-weight: bold;
+    color: #2e7d32;
+}
+.fail{
+    background-color: #f8d7da;
+    font-weight: bold;
+    color: #c82828;
+}
