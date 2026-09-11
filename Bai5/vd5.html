@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>ICTU NEWS</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family:'Times New Roman', Times, serif; background: #fff; color: #1c2b3a; }
+ 
+  header {
+    text-align: center;
+    padding: 40px 0 30px;
+  }
+  header h1 {
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
+ 
+  nav {
+    background: black;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 16px 0;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  nav a:hover { text-decoration: underline; }
+ 
+  main {
+    display: flex;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 24px;
+  }
+ 
+  .content { flex: 2; display: flex; flex-direction: column; gap: 20px; }
+  .article {
+    border: 1px solid #cfd6dd;
+    padding: 20px;
+  }
+  .article h2 { font-size: 20px; margin-bottom: 8px; }
+  .article p { font-size: 14px; color: black; }
+ 
+  .sidebar {
+    flex: 1;
+    border: 1px solid #cfd6dd;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .sidebar h3 { font-size: 18px; margin-bottom: 6px; }
+  .sidebar a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .sidebar a:hover { text-decoration: underline; }
+ 
+  footer {
+    background: black;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+ 
+  <header>
+    <h1>ICTU NEWS</h1>
+  </header>
+ 
+  <nav>
+    <a href="#">Trang chủ</a>
+    <a href="#">Tin tức</a>
+    <a href="#">Đào tạo</a>
+    <a href="#">Liên hệ</a>
+  </nav>
+ 
+  <main>
+    <div class="content">
+      <div class="article">
+        <h2>Samsung Innovation Campus 2026</h2>
+        <p>Chương trình đào tạo dành cho sinh viên...</p>
+      </div>
+      <div class="article">
+        <h2>Chương trình thực tập doanh nghiệp</h2>
+        <p>Sinh viên tham gia các dự án thực tế...</p>
+      </div>
+    </div>
+ 
+    <aside class="sidebar">
+      <h3>Thông báo</h3>
+      <a href="#">Lịch học</a>
+      <a href="#">Lịch thi</a>
+      <a href="#">Thực tập doanh nghiệp</a>
+    </aside>
+  </main>
+ 
+  <footer>
+    &copy; 2026 ICTU
+  </footer>
+ 
+</body>
+</html>
